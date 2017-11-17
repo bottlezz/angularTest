@@ -17,7 +17,7 @@ angular.module('myApp.view1',
   var self=this;
   //$scope.items=[];
   $scope.items2 = ["hello"];
-  $http.get('/test.json').then((response) =>{
+  $http.get('../test.json').then((response) =>{
     $scope.items = response.data;
 
   });
