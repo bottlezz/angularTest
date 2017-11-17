@@ -13,6 +13,6 @@ angular.module('myApp.view1', ['ngRoute'])
   var self=this;
   $http.get('/test.json').then((response) =>{
     self.data = response.data;
-    console.log(self.data);
+    //console.log(self.data);
   });
 }]);
