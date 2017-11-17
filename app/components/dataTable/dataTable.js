@@ -1,9 +1,15 @@
-angular.module('myApp', ['ngRoute'])
+angular.module('myApp.dataTable', ['myApp.companyEntry'])
 
-.component('',{
-    templateUrl: 'dataTable.html',
-    controller: 'dataTableCtrl',
-    bindings:{ itemTemplate:'='}
+.component('listDataTable',{
+    templateUrl: 'components/dataTable/dataTable.html',
+    bindings:{ 
+        items:'='
+    }
+ 
 })
 
-.controller('dataTableCtrl',function(){})
+// .controller('dataTableCtrl',['$scope',($scope)=>{
+
+    
+//     console.log(this.items)
+// }])

@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.view1', 
+['ngRoute',
+'myApp.dataTable',
+'myApp.companyEntry'
+])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -9,10 +13,14 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ["$http",function($http) {
+.controller('View1Ctrl', ['$scope','$http',function($scope,$http) {
   var self=this;
+  //$scope.items=[];
+  $scope.items2 = ["hello"];
   $http.get('/test.json').then((response) =>{
-    self.data = response.data;
-    //console.log(self.data);
+    $scope.items = response.data;
+
   });
+  console.log("1")
+
 }]);

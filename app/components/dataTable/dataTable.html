@@ -1,5 +1,13 @@
-<ul>
-    <li ng-repeat="item in $data.item">
-        <div ng-bind-html="$ctrl.itemTemplate"></div>
-    </li>
-</ul>
+<div class="col-md-2">
+        <!--Sidebar content-->
+  
+        Search: <input ng-model="$ctrl.query" />
+  
+      </div>
+    <span>data Table</span>
+    <ul>
+        <li ng-repeat="item in $ctrl.items | filter:$ctrl.query">
+     
+            <company-entry item="item"></company-entry>
+        </li>
+    </ul>

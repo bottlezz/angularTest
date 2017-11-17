@@ -1,5 +1,6 @@
-angular.module('compnayEntry', [])
+angular.module('myApp.companyEntry', [])
 
-.component('',{
-    templateUrl: 'companyEntry.html'
+.component('companyEntry',{
+    templateUrl: 'components/companyEntry/companyEntry.html',
+    bindings:{item:'='}
 })
